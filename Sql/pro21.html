@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <style>
+
+ 
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      li{
+        font-size: 21px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 23px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+  
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+     <br>
+    
+
+        <h1>Having Clause </h1>
+        <p>The HAVING clause places the condition in the groups defined by the GROUP BY clause in the SELECT statement.</p>
+
+      <p>This SQL clause is implemented after the 'GROUP BY' clause in the 'SELECT' statement.</p>
+
+       <p>This clause is used in SQL because we cannot use the WHERE clause with the SQL aggregate functions. Both WHERE and HAVING clauses are used for filtering the records in SQL queries.</p>
+        
+        <h2><li><b>Syntax Of Having Clause</b> </li></h2>
+        <p><b>Mysql> </b>SELECT column_Name ,aggregate_function_name(column_Name) <br>
+            FROM table_name <br>
+            GROUP BY column_Name <br>
+            HAVING condition;  </p>
+        
+        <h2><li><b>Example of Having Clause</b></li></h2>
+        <p>select emp_name , sum(emp_salary) from employee group by emp_name having sum(emp_salary)>=20000;</p>
+        <iframe src="./images/having.png" width="65%" height="370px" frameborder="2px"></iframe><br><br><br>
+
+        <button onclick="history.back()">Back</button> <br>
+
+
+        
+    </body>
+</html>

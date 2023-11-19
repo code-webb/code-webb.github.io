@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <style>
+
+
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      li{
+        font-size: 23px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 23px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p1{
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+        
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+      
+       
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+     <br>
+      
+    
+
+        <h1>Foreign Key Constraint</h1>
+        <li>Foreign key constraint is also Known as Referential Integrity Constraint. </li>
+        <li>It maintains the integrity data by checking the refrence of the data from the primary key table.</li>
+        <li>The table on which we have Primary key is Known as Parent table/ Master table / Primary table.</li>
+        <li>The table on which on have Foreign key is also Known as Child table/ Slave table/ Secondary table.</li>
+        <li>The column   of the master table and the slave table datatype should be same (column name can be different </li>
+        <li>The table can have Multiple foreign key.</li>
+        <li>If the master table we are having the two column on which primary key is apply then is a slave table then should be two which are refrence to the master table column.</li><br>
+        
+
+        <h2><li><b>Syntax Of Foreign Key Constraint</b></li></h2>
+        <p><b>Mysql> </b>CREATE TABLE tablename( <br>
+            ColumnName1 Datatype , <br>
+            ColumnNameN Datatype, <br>
+            FOREIGN KEY( ColumnName ) REFERENCES PARENT_TABLE_NAME(Primary_Key_ColumnName) <br>
+        );</p>
+
+            <p><b>Mysql> </b>ALTER TABLE table_name  ADD CONSTRAINT constraint_name FOREIGN KEY(columName) <br>
+                            REFERENCES PARENT_TABLE_NAME(Primary_Key_ColumnName) ;</p>
+        
+        <h2><li><b>Example of Foreign Key Constraint</b></h2>
+        <p1>create table person(personID int, person_name varchar(20), person_age int); </p1><br>
+        <p1>create table orders(ordersID int, orderNumber int, personID int); </p1><br>
+        <p1>Alter table person add Constraint Pk_person primary key(personID);</p1><br>
+        <p1>Alter table orders add Constraint FK_orders foreign key(personID) Refrences person(personID) ;</p1><br>
+        <p1>desc person;</p1><br>
+        <p1>desc orders;</p1><br><br>
+        <iframe src="./images/foreign key constraints.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+
+        <h1>Foreign Key Constraint Parameter</h1>
+         <li>There are Four Types of Foreign Key Constraint Parameter : </li>
+        <p>1. On delete set null <BR>
+           2. On delete cascade <BR>
+           3. On update set null <BR>
+           4. On update cascade</p><br>
+       
+         <p><b>1. ON DELETE SET NULL : </b> A foreign key with "set null on delete" means that if a record in the parent table is deleted, then the corresponding records in the child table will have the foreign key fields set to NULL.</p>
+
+         <h2><li><b>Syntax Of  On delete set null</b></li></h2>
+         <p><b>Mysql> </b>CREATE TABLE table_name( <br>
+               Column1 datatype, <br>
+               Column2 datatype, <br>
+               FOREIGN KEY(ColumnName) <br>
+               REFERENCES PARENT_TABLE(ColumnName) ON DELETE SET NULL <br>
+         );</p><br>
+
+       
+         <p><b>2. ON UPDATE SET NULL : </b> I know that when setting cascade actions for a table, we may use ON UPDATE SET NULL to, well, set the foreign key field to null when the referenced row is updated.</p>
+
+        <h2><li><b>Syntax Of On update set null</b> </li></h2>
+        <p><b>Mysql> </b>CREATE TABLE table_name( <br>
+            Column1 datatype, <br>
+            Column2 datatype, <br>
+            FOREIGN KEY(ColumnName) <br>
+            REFERENCES PARENT_TABLE(ColumnName) ON UPDATE SET NULL <br>
+        ); </p><br>
+            
+        <h2><li><b>Example of ON DELETE SET NULL and ON UPDATE SET NULL</b> </li></h2>
+        <p>create table employee( <br>
+            emp_id int PRIMARY KEY, <br>
+        emp_Name varchar(20), <br>
+    emp_age int <br>
+            );</p>
+            <p>create table department( <br>
+                Dept_Id int , <br>
+            Dept_Name varchar(20), <br>
+        constraint FK_deptid FOREIGN KEY(Dept_Id) <br>
+        references employee(emp_id) ON DELETE SET NULL ON UPDATE SET NULL; <BR>
+                );</p>
+            <iframe src="./images/on delte set null B.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+            <p>select * from employee;</p>
+            <p>select * from department;</p>
+            <p>delete from employee where emp_id=102;</p>
+            <p>select * from employee;</p>
+            <p>select * from department;</p>
+
+            <iframe src="./images/on delete set null1 A.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+             
+         <p><b>3. ON DELETE CASCADE : </b> ON DELETE CASCADE Indicates that when the row in the parent table is deleted, the dependent rows in the child table will also be deleted</p>
+
+         <h2><li><b>Syntax Of delete cascade</b></li></h2>
+         <p><b>Mysql> </b>CREATE TABLE table_name( <br>
+            Column1 datatype, <br>
+            Column2 datatype,  <br>
+            FOREIGN KEY(ColumnName) <br>
+            REFERENCES PARENT_TABLE(ColumnName) ON DELETE CASCADE 
+         );</p><br>
+
+         <p><b>4. ON UPDATE CASCADE : </b> ON UPDATE CASCADE clause in MySQL is used to update the matching records from the child table automatically when we update the rows in the parent table.</p>
+
+        <h2><li><b>Syntax Of On update cascade</b> </li></h2>
+         <p><b>Mysql> </b>CREATE TABLE table_name( <br>
+            Column1 datatype, <br>
+            Column2 datatype, <br>
+            FOREIGN KEY(ColumnName) <br>
+            REFERENCES PARENT_TABLE(ColumnName) ON UPDATE CASCADE <br>
+         );</p><br>
+
+        <h2><li><b>Example of ON DELETE CASCADE and ON UPDATE CASCADE</b> </li></h2>
+        <p>create table employee( <br>
+        emp_id int PRIMARY KEY, <br>
+    emp_Name varchar(20), <br>
+emp_age int <br>
+        );</p>
+        <p>create table department( <br>
+            Dept_Id int , <br>
+        Dept_Name varchar(20), <br>
+    constraint FK_deptid FOREIGN KEY(Dept_Id) <br>
+    references employee(emp_id) ON UPDATE CASCADE ON DELETE CASCADE <BR>
+            );</p>
+
+            <iframe src="./images/on update cascade A.png" width="65%" height="325px" frameborder="2px"></iframe><br><br>
+            
+            <p>select * from employee;</p>
+            <p>select * from department;</p>
+            <p>delete from employee where emp_id=102;</p>
+            <p>select * from employee;</p>
+            <p>select * from department;</p>
+
+            <iframe src="./images/on update cascade1 B.png" width="65%" height="370px" frameborder="2px"></iframe><br><br><br>
+
+       
+
+        <button onclick="history.back()">Back</button> <br>
+          
+
+
+    </body>
+</html>
+
+
+  

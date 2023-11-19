@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+    
+    
+    h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color:rgb(114, 1, 114);
+    margin-top: 12px;
+    }
+    
+
+    p  {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+    li{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: darkblue;
+    font-weight: bold;
+    }
+    
+     b{
+            background-color: white;
+            padding: 5px;
+            font-size: 18px;
+         }
+         
+    
+         button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+       
+    </style>
+    </head>
+    <body>
+        
+
+        <br>
+       
+        <h1>Attributes & Keys</h1>
+        
+        <p><b>Attributes : </b>Entities are represented by means of their properties, called attributes. All attributes have values. For example, a student entity may have name, class, and age as attributes.</p>
+        
+
+        <li>Types of Attributes</li><br><br>
+        <img src="./images/Attributes.png"><br><br>
+        
+       <p><b>1. primary Key Attributes : </b>primary Key Attributes DBMS's key attributes are used to uniquely identify each row in a table. Usually, there is more than one key attribute in a table (primary key and foreign key).</p>
+
+        <p><b>For example: </b>In a table of employees, the employee ID would be the primary key, while the manager ID would be the foreign key</p>.
+        <h2><img src="./images/key attributr.webp"></h2><br><br>
+
+
+    <p><b>2. Single Valued Attributes : </b>Single-valued attributes can only have one value. For example, a person's Social Security Number is a single-valued attribute. Social Security Numbers are used to uniquely identify individuals in the United States and are, therefore, single-valued attributes.</p>
+
+     <p><b>For example : </b>Examples of single-valued attributes include employee numbers, customer numbers, and product codes. Single-valued attributes are typically used to provide a unique identifier for an entity and are often used in databases.</p><br>
+     <h3><img src="./images/single multi.png"></h3><br><br>
+     
+     <p><b>3. Multivalued Attributes : </b>Multivalued attributes can have more than one value. For example, a person may have multiple email addresses or phone numbers. Multivalued attributes in DBMS are often used to store information about relationships between entities. For instance, an employee entity might have a multivalued attribute called "dependents" that stores the names of the employee's dependents. Multivalued attributes can also be used to represent hierarchical data. 
+
+    <p><b>4. Composite Attributes : </b>Composite attributes are made up of two or more simple attributes. For example, a person's address may be a composite attribute that is made up of the person's street address, city, state, and zip code. Composite attributes can be used to create more complex data models and can be helpful when trying to represent data in a concise way.</p>
+    <h4><img src="./images/composite1.png"></h4>
+
+    <p><b>5. Derived Attributes : </b>Derived attributes are based on other attributes and are not stored directly in the database.
+
+    <p><b>For example: </b>Consider a database of employees. Each employee has a date of birth, and we might want to calculate their age. However, age is a derived attribute because it can be determined from the date of birth. As such, it would not make sense to store it directly in the database. </p>
+    <img src="./images/Derived.png"><br><br><br><br>
+
+    <button onclick="history.back()">Back</button><br>
+
+
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <style>
+
+
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+        li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       
+       
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1> Assignments And Experssion </h1>
+    
+    <p>The PL/SQL assignment statement allows a value to be assigned or reassigned to a variable after the DECLARE section of the block. An expersion is a sequence of variable or literals, separated by operators. In simple terms, the group of variable, Constants and operators build an expersion.<br>
+     In PL/SQL, Assignment Operator (:=) is the most basic Operator.</p>
+
+     <li> The syntax of Assignments And Experssion </li>
+     <p>variable := expersion;</p>
+
+     <p>Here variable is a PL/SQL variable and expersion is PL/SQL expersion. Assignment are legal in the executable and exception handling sections of PL/SQL block. The variable to receive the new value must be Explicitly named on the left of the assignment Operator.</p>
+
+     <li> The Example of Assignments And Experssion  and OUTPUT</li>
+     <p>declare <br>
+        str1 varchar (10); <br> 
+        str2 varchar (10); <br> 
+        Num1 number; <br>
+        begin <br>
+        str1:='HELLO'; <br>
+        str2:='welcome'; <br>
+        Num1:=250; <br>
+        dbms_output.put_line(str1); <br>
+        dbms_output.put_line(str2);  <br>
+        dbms_output.put_line(num1); <br>
+        end; </p><br>
+
+        
+        <iframe src="./images/assginment.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+
+     <button onclick="history.back()">Back</button>
+
+
+     </body>
+     </html>

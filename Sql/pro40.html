@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <style>
+
+
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      
+    p{
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p1{
+        font-size: 23px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+        
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+        
+       
+       
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+     <br>
+    
+
+        <h1> Chracter function (String function)</h1>
+        <p>Character functions accept character inputs and can return either characters or number values as output. SQL provides a number of different character datatypes which includes - CHAR, VARCHAR, VARCHAR2, LONG, RAW, and LONG RAW. The various datatypes are categorized into three different datatypes :</p>
+
+            <p>1. VARCHAR2 – A variable-length character datatype whose data is converted by the RDBMS.<br>
+               2. CHAR – The fixed-length datatype.<br>
+               3. RAW – A variable-length datatype whose data is not converted by the RDBMS, but left in “raw” form.</p><br>
+
+               <h1>There are some of Character function : </h1>
+               
+
+          <p><b>1. LOWER() : </b> This function converts alpha character values to lowercase. LOWER will actually return a fixed-length string if the incoming string is fixed-length. </p>
+
+        <h2><li>Syntax of  LOWER() Function </h2>
+          <p><b> Mysql> </b> SELECT LOWER(text) FROM dual;</p>
+
+        <h2><li>Example of  LOWER() Function </h2>
+        <p1>Select LOWER("IT IS LOWER FUNCTION") from dual;</p1><br><br><br>
+        <iframe src="./images/lower function.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+        
+
+        
+        <p><b>2. UPPER() : </b> This function converts alpha character values to uppercase. Also UPPER function too, will actually return a fixed-length string if the incoming string is fixed-length.  </p>
+
+        <h2><li>Syntax of UPPER() Function </h2>
+          <p><b> Mysql> </b> SELECT UPPER(text) FROM dual; </p>
+
+        <h2><li>Example of  UPPER() Function </h2>
+          <p1>select UPPER("it is uppercase function") from dual; </p1><br><br><br>
+
+          <iframe src="./images/uper functions.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+        
+
+        <p><b>3. CHAR_LENGTH()  : </b>This function returns the length of the input string. If the input string is NULL, then LENGTH function returns NULL and not Zero. Also, if the input string contains extra spaces at the start, or in between or at the end of the string, then the LENGTH function includes the extra spaces too and returns the complete length of the string.  </p>
+
+        <h2><li>Syntax of CHAR_LENGTH()  Function </h2>
+          <p><b> Mysql> </b> SELECT CHAR_LENGTH(text) FROM dual; </p>
+
+        <h2><li>Example of  CHAR_LENGTH()  Function </h2>
+          <p1>select CHAR_LENGTH("string function") from dual;</p1><br><br><br>
+
+          <iframe src="./images/char length.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+        
+        <p><b>4. CONCAT()  : </b> This function always appends ( concatenates ) string2 to the end of string1. If either of the string is NULL, CONCAT function returns the non-NULL argument. If both strings are NULL, CONCAT returns NULL. </p>
+
+        <h2><li>Syntax of CONCAT()  Function </h2>
+          <p><b> Mysql> </b> SELECT CONCAT('String1', 'String2') FROM dual; </p>
+
+        <h2><li>Example of  CONCAT()  Function </h2>
+          <p1>select CONCAT("Computer", "Science") from dual;</p1><br><br><br>
+          <iframe src="./images/concat.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+  
+
+        <p><b>5.TRIM()   : </b> The TRIM() function removes the space character OR other specified characters from the start or end of a string. By default, the TRIM() function removes leading and trailing spaces from a string. </p>
+
+        <h2><li>Syntax of TRIM()   Function </h2>
+          <p><b> Mysql> </b> SELECT TRIM ([characters FROM ]string) FROM dual; </p>
+
+        <h2><li>Example of  TRIM()   Function </h2>
+          <p1>select TRIM ("       computer         ") from dual;</p1><br><br><br>
+          <iframe src="./images/trim function.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+       
+
+        <p><b>6.LEFT() : </b>The LEFT() function extracts a number of characters from a string (starting from left).</p>
+
+        <h2><li>Syntax of LEFT()    Function </h2>
+        <p><b> Mysql> </b> SELECT LEFT(string, number_of_chars) FROM dual;  </p>
+
+        <h2><li>Example of  LEFT() Function </h2>
+          <p1>select LEFT("Computer Science",6) from dual; </p1><br><br><br>
+          <iframe src="./images/left function.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+        
+           
+
+        <p><b>7. RIGHT() : </b>The RIGHT() function extracts a number of characters from a string (starting from right).</p>
+
+        <h2><li>Syntax of  RIGHT()     Function </h2>
+        <p><b> Mysql> </b> SELECT  RIGHT(string, number_of_chars) FROM dual;  </p>
+
+        <h2><li>Example of   RIGHT()      Function </h2>
+          <p1> select RIGHT("Computer Science",6) from dual; </p1><br><br><br>
+          <iframe src="./images/right function.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+        
+
+
+        <p><b>8. MID() : </b>The MID() function extracts a substring from a string (starting at any position).</p>
+
+        <h2><li>Syntax of MID() Function </h2>
+        <p><b> Mysql> </b> SELECT  MID(string, start, length) FROM dual;  </p>
+
+        <h2><li>Example of   MID()      Function </h2>
+          <p1>select  MID("Computer", 5, 8) from dual;</p1><br><br><br>
+          <iframe src="./images/MID FUNCTION.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+    
+
+
+        <p><b>9.FLOOR()   : </b> The FLOOR() function returns the largest integer value that is smaller than or equal to a number.</p>
+
+        <h2><li>Syntax of FLOOR()  Function </h2>
+        <p><b> Mysql> </b> SELECT FLOOR(number) FROM dual;  </p>
+
+        <h2><li>Example of   FLOOR() Function </h2>
+          <p1>select FLOOR(42.8888867) FROM dual;  </p1><br><br><br>
+          <iframe src="./images/floor function.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+
+        <p><b>10. GREATEST() : </b> The GREATEST() function returns the greatest value from a list of arguments.</p>
+
+        <h2><li>Syntax of GREATEST() Function </h2>
+        <p><b> Mysql> </b> SELECT GREATEST(arg1, arg2, .... argn) FROM dual;  </p>
+
+        <h2><li>Example of  GREATEST() Function </h2>
+          <p1>select gratest(67,34,12,123,450) FROM dual;  </p1><br><br><br>
+          <iframe src="./images/greatest function.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+        
+           
+
+        <p><b>11.  POW() : </b> The POW() function returns the value of a number raised to the power of another number.</p>
+
+        <h2><li>Syntax of  POW() Function </h2>
+        <p><b> Mysql> </b> SELECT POW(x, y) FROM dual;  </p>
+
+        <h2><li>Example of   POW() Function </h2>
+          <p1>select pow(4,3) FROM dual;  </p1><br><br><br>
+          <iframe src="./images/pow function.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+        
+
+        <p><b>12. RAND() : </b> The RAND() function returns a random number between 0 (inclusive) and 1 (exclusive).</p>
+
+        <h2><li>Syntax of RANDOM()  Function </h2>
+        <p><b> Mysql> </b> SELECT RAND(seed) FROM dual; <br>
+            Optional. If seed is specified, it returns a repeatable sequence of random numbers. If no seed is specified, it returns a completely random number </p>
+
+        <h2><li>Example of RANDOM()  Function </h2>
+          <p1>select rand() FROM dual;  </p1><br><br><br>
+          <iframe src="./images/random function.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+
+
+        <button onclick="history.back()">Back</button> <br>
+           
+        
+        
+        
+
+
+       
+         
+
+        
+
+
+        
+    </body>
+</html>

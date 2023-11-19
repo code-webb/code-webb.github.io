@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+    
+   
+    
+    h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color:rgb(114, 1, 114);
+    margin-top: 12px;
+    }
+   
+    p  {
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+    li{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+    h5 li  {
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(83, 3, 83);
+    font-weight: bold;
+    }
+     b{
+            background-color: white;
+            padding: 5px;
+            font-size: 18px;
+         }
+        
+    
+         button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+       
+    </style>
+    </head>
+    <body>
+        
+        <br>
+       
+    
+     <h1>Data Independence</h1>
+     <b>Data independence : </b>
+     <p>Data independence can be explained using the three-schema architecture. Data independence refers characteristic of being able to modify the schema at one level of the database system without altering the schema at the next higher level.</p>
+
+    <h5><li>There are two types of data independence:</li></h5>
+    <p>1. Logical Data Independence<br>
+      2. Physical Data Independence</p>
+    <img src="./images/data-independence.png">
+    <p><b>1. Logical Data Independence : </b>
+        <li>Logical data independence refers characteristic of being able to change the conceptual schema without having to change the external schema.</li>
+        <li>Logical data independence is used to separate the external level from the conceptual view.</li>
+        <li>If we do any changes in the conceptual view of the data, then the user view of the data would not be affected.</li>
+       <li> Logical data independence occurs at the user interface level.</li><br><br>
+
+       <b>2. Physical Data Independence : </b><br><br>
+       <li> Physical data independence can be defined as the capacity to change the internal schema without having to change the conceptual schema.</li>
+        <li>If we do any changes in the storage size of the database system server, then the Conceptual structure of the database will not be affected.</li>
+        <li>Physical data independence is used to separate conceptual levels from the internal levels.</li>
+        <li>Physical data independence occurs at the logical interface level.</li><br><br>
+
+        <button onclick="history.back()">Back</button><br>
+        
+
+
+
+    </body>
+</html>

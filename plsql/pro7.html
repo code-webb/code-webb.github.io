@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <style>
+
+  
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+
+
+li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+        b1{
+            font-weight: bold;
+            font-size: 24px;
+            background-color: white;
+        }
+        
+        
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Loop /Iterative Control</h1>
+
+    <p>Iterative control statement or loop control structure are used when we want to repeat the execution of one or more statement for specified number of times.          <br><br>
+    <b>PL/SQL provides the following types of loops : </b>   <br>
+    (i) Basic loop / simple loop<br>
+    (ii) WHILE loop<br>
+    (iii)FOR loop</p><br>
+
+    <p><b1>(i) simple loop : </b1>The simplest loop statement is the basic (or infinite) loop, which encloses a squence of statement between the keywords LOOP and END LOOP. A basic loop allows execution of its statement at least once, even if the condition is already met upon entering the loop. without the EXIT statement, the loop would be infinite or endless. <br><br>
+    <b>The EXIT Statement : </b> you can use the EXIT statement to terminate a loop, control passes to the next statement after the END LOOP statement. The EXIT statement must be placed inside a loop. you can also attach a WHEN clause to allows conditional termination of the loop.</p>
+
+    <li>The Syntax of  simple loop </li>
+    <p> LOOP  <br> 
+        statement; <br>
+         ..... <br>
+        EXIT [WHEN condition]; <br>
+        END LOOP; </p>
+
+    <li>The Example of simple loop and OUTPUT </li>
+    <p>DECLARE <br> 
+        x number := 10; <br> 
+     BEGIN  <br>  
+        LOOP <br> 
+           dbms_output.put_line(x); <br> 
+           x := x + 10;  <br>
+           IF x > 50 THEN  <br>
+              exit;  <br>
+           END IF;  <br>
+        END LOOP;   <br> 
+        dbms_output.put_line('After Exit x is: ' || x); <br> 
+     END;  </p><br>
+
+     <iframe src="./images/basicloop1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+     <li>Output </li><br><br>
+     <iframe src="./images/basicloopout1.png" width="60%" height="250px" frameborder="1px"></iframe><br><br>
+    
+    
+    <p><b1> (ii) WHILE loop : </b1>you can use the WHILE loop to repeat a squence of statement until the controlling condition is TRUE. The condition is evaluatedat the start of each iteraction. The loop terminates when the condition is FALSE. If the condition is FALSE at the start of the loop, then no further iteraction are performed.</p>
+
+    <li>The Syntax of WHILE loop </li>
+    <p>WHILE condition                               <br>
+        loop                                          <br>
+       statement1;                                   <br>
+       statement2;                                    <br>
+       ......                                        <br>
+       END loop;</p>                                 <br>
+
+       <li>The Example of  WHILE loop and OUTPUT</li>
+       <p>declare <br>
+        num number := 1; <br>
+        begin <br>
+        while num<=10 <br>
+        loop <br>
+        Dbms_output.put_line(num); <br>
+        num := num+1; <br>
+        end loop; <br>
+        end;</p><br>
+
+        <iframe src="./images/while loop1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+        
+        <li>Output </li><br><br>
+        <iframe src="./images/whileloopoutput1.png" width="60%" height="250px" frameborder="1px"></iframe><br><br>
+
+       <p><b1>(iii) FOR loop : </b1>For loop have the same gerneral structure as the basic loop. In addition, they have a control statement before the LOOP keyword to determine the number of iteraction that PL/SQL performs.</p>
+
+       <li>The Syntax of FOR loop </li>
+       <p>FOR variable_name in start..end               <br>
+          loop                                          <br>
+          statement1;                                    <br>
+          statement2;                                    <br>
+          ......                                          <br>
+          END loop,</p>                                  <br>
+
+          <li>The Example of FOR loop and OUTPUT </li>
+          <p>declare <br>
+            num number; <br>
+            fact number; <bR>
+            begin <br>
+            fact := 1; <br>
+            num := 3; <br>
+            for i in 1..num <br>
+            loop <br>
+               fact := fact*i; <br>
+            end loop; <br>
+            Dbms_output.put_line('factorial of ' ||num|| ' is : '||fact); <br> 
+            end;</p><br>
+
+            <iframe src="./images/forloop.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+          <button onclick="history.back()">Back</button><br>
+
+          </body>
+          </html>
+

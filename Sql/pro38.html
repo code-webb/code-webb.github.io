@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+
+ 
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          p{
+            font-size: 23px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+           
+            b{
+            background-color: white;
+            padding: 2px;
+        }
+        li{
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+    </style>
+</head>
+    <body>
+        
+      <br>       
+
+         <h1>Commit Command</h1>
+<p><b>COMMIT : </b> Commit is used for saving the DML (data manipulation language) Transaction. By Default in mysql the Autocommit is enable that is if we executed any Transaction then that Transaction is Autocommit save so to disabled the Autocommit the command is : <br><br>
+SET AUTOCOMMIT ON : Enable autocommit feature (Command : SET AUTOCOMMIT = 0;)<br>
+SET AUTOCOMMIT OFF : Is the Default and disables the autocommit commiting (Command : SET AUTOCOMMIT = 1;)</p>
+
+
+<li><b>Syntax Of Commit command</b></li>
+<p>Mysql> COMMIT; </p><br>
+
+<li><b>Example of Commit command</b></li>
+<p>select * from city; </p>
+<p>insert into city values(3,"Chandigarh"); </p>
+<p>select * from city; </p>
+<br><br>
+
+<iframe src="./images/committ.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+<p>COMMIT; </p>
+<p>select * from city; </p>
+<p>ROLLBACK; </p>
+<p>select * from city; </p><br><br>
+<iframe src="./images/commit1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br><br>
+
+<button onclick="history.back()">Back</button>  <br>
+
+
+
+
+
+
+
+  
+
+    </body>
+</html>

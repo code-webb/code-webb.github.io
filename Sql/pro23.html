@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <style>
+
+
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      li{
+        font-size: 21px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+  
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+     <br>
+    
+
+        <h1>Insert multiple rows</h1>
+        <p>Many times developers ask that is it possible to insert multiple rows into a single table in a single statement. Currently, developers have to write multiple insert statements when they insert values in a table. It is not only boring but also time-consuming.</p>
+       
+        
+        <h2><li><b>Syntax Of Insert multiple rows</b></li></h2>
+        <p><b>Mysql> </b>INSERT INTO table_name  VALUES (value1, value2),(secondvalue2, secondvalue2);</p>
+        
+        <h2><li><b>Example of Insert multiple rows</b></li></h2>
+        <p>insert into employee values(105,"Divya",10000), <br>
+           (106,"Sanjeet",2000),<br>
+           (107,"Sandhya",5000);</p>
+           <p>select * from employee;</p>
+        <iframe src="./images/insert multiplle row1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <button onclick="history.back()">Back</button> <br>
+
+
+        
+    </body>
+</html>

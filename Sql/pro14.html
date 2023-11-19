@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <style>
+
+
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+
+      h2{
+        color: rgb(104, 5, 5);
+      }
+      li{
+        font-size: 21px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+       
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+      <br>
+    
+
+        <h1>Alter table</h1>
+        <p>Alter table is used for changing the structure of table.</p>
+        <p>The ALTER TABLE statement in Structured Query Language allows you to add, modify, and delete columns of an existing table. This statement also allows database users to add and remove various SQL constraints on the existing tables.</p>
+        <p>Any user can also change the name of the table using this statement.</p>
+        
+
+       <h2>1. Alter table add column</h2>
+       <p>In many situations, you may require to add the columns in the existing table. Instead of creating a whole table or database again you can easily add single and multiple columns using the ADD keyword.</p>
+
+       <h2><li><b>Syntax Of Alter table add column</b></li></h2>
+       <p><b>Mysql> </b> ALTER TABLE table_name ADD column_name datatype ; </p>
+
+       <h2><li><b>Example Of Alter table add column</b></li></h2>
+       <p>alter table student add class varchar(20);</p>
+       <p>select * from student;</p>
+       <iframe src="./images/alter add1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br><br>
+
+       <h2>2. Alter table modify column</h2>
+       <p>The MODIFY keyword is used for changing the column definition of the existing table.</p>
+
+       <h2><li><b>Syntax Of Alter table modify column</b></li></h2>
+       <p><b>Mysql> </b> ALTER TABLE table_name MODIFY column_name newdatatype ;   </p>
+
+       <h2><li><b>Example Of Alter table modify column</b></li></h2>
+       <p>alter table employee modify emp_age bigint;</p>
+       <p>desc employee;</p>
+       <iframe src="./images/alter modify1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br><br>
+
+       <h2>3. Alter table drop column</h2>
+       <p>In many situations, you may require to delete the columns from the existing table. Instead of deleting the whole table or database you can use DROP keyword for deleting the columns.</p>
+
+       <h2><li><b>Syntax Of Alter table drop column</b></li></h2>
+       <p><b>Mysql> </b> ALTER TABLE table_name DROP column_name;</p>
+
+       <h2><li><b>Example Of Alter table drop column</b></li></h2>
+       <p>alter table employee drop emp_age;</p>
+       <p>select * from employee;</p>
+       <iframe src="./images/alter drop1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br><br>
+       
+       <button onclick="history.back()">Back</button> <br>
+
+
+        
+    </body>
+</html>

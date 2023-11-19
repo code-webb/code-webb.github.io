@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <style>
+
+
+    
+    h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color:rgb(114, 1, 114);
+    margin-top: 12px;
+    }
+   
+
+p  {
+font-size: 20px;
+font-family: 'Times New Roman', Times, serif;
+}
+li{
+font-size: 20px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+     h2{
+        color: blue;
+     }
+
+     h3{
+      color: rgb(47, 2, 88);
+     }
+     button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+       
+</style>
+</head>
+<body>
+    
+    
+<br>
+    
+
+        <h1>Reduction of ER diagram to Table</h1>
+<li>The database can be represented using the notations, and these notations can be reduced to a collection of tables.</li>
+ <li> the database, every entity set or relationship set can be represented in tabular form.</li>
+
+<h2>The ER diagram is given below:</h2>
+<h4><img src="./images/ER-diagramtable.png"></h4>
+
+<h2>There are some points for converting the ER diagram to the table:</h2><br>
+
+<h3>1. Entity type becomes a table.</h3>
+<p>In the given ER diagram, LECTURE, STUDENT, SUBJECT and COURSE forms individual tables.</p><br>
+
+<h3>2. All single-valued attribute becomes a column for the table.</h3>
+<p>In the STUDENT entity, STUDENT_NAME and STUDENT_ID form the column of STUDENT table. Similarly, COURSE_NAME and COURSE_ID form the column of COURSE table and so on.</p><br>
+
+<h3>3. key attribute of the entity type represented by the primary key.</h3>
+<p>In the given ER diagram, COURSE_ID, STUDENT_ID, SUBJECT_ID, and LECTURE_ID are the key attribute of the entity.</p><br>
+
+<h3>4. The multivalued attribute is represented by a separate table.</h3>
+<p>In the student table, a hobby is a multivalued attribute. So it is not possible to represent multiple values in a single column of STUDENT table. Hence we create a table STUD_HOBBY with column name STUDENT_ID and HOBBY. Using both the column, we create a composite key.</p><br>
+
+<h3>5. Composite attribute represented by components.</h3>
+<p>In the given ER diagram, student address is a composite attribute. It contains CITY, PIN, DOOR#, STREET, and STATE. In the STUDENT table, these attributes can merge as an individual column.</p><br>
+
+<h3>6. Derived attributes are not considered in the table.</h3>
+<p>In the STUDENT table, Age is the derived attribute. It can be calculated at any point of time by calculating the difference between current date and Date of Birth.</p><br>
+
+<p>Using these rules, you can convert the ER diagram to tables and columns and assign the mapping between the tables. Table structure for the given ER diagram is as below:</p><br>
+
+<h5><img src="./images/reduction table.png"></h5><br><br>
+
+<button onclick="history.back()">Back</button>
+    <br>
+    
+</body>
+</html>

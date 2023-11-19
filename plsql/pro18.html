@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <style>
+
+ 
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+
+          
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        b{
+            font-size: 27px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        b1{
+            font-size: 22px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: white;
+            font-weight: bold;
+        }
+        li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+       
+        img {
+          width: 65%;
+          height: 60%;
+        }
+
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+        
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Types of Trigger</h1>
+    <p>When you define a trigger, you can specify the number of times the trigger action is to be excuted. once for every row effected by the triggering satement (row-level trigger) or once for the triggering statement, no matter how many rows it affects (statement-level trigger).</p>
+    <b>Depending upon, when a trigger is fired, it may be classified as : </b>
+      <p>(i) statement-level trigger/ table lavel trigger<br>
+        (ii) row-level trigger<br>
+        (iii) Before trigger<br>
+        (iv) After trigger</p><br>
+
+        <p><b>(i) statement-level trigger/ table lavel trigger : </b> A statement-level trigger is fired once on behalf of the triggering statement regardless of the number of rows in the table that the triggering statement affects.</p>
+        
+        <li>Example of statement-level trigger/ table lavel trigger and OUTPUT</li>
+            <p>Select * from product;</p>
+
+         <iframe src="./images/product table;1.png" width="60%" height="270px" frameborder="1px"></iframe><br><br><br>
+
+            <p>create or replace trigger table_level <br>
+                before update  <br>
+                on product <br>
+                begin  <br>
+                Dbms_output.put_line('The product table values is updated'); <br>
+                end;  <br></p>
+                
+        <iframe src="./images/table level trigger1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+                <p>update product set p_name='frooti', price=56 where p_id=103;</p>
+
+        <iframe src="./images/tablelevel call1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+              <p><b> (ii) row-level trigger : </b> A row levell trigger is fired each time the table is affected by the triggering statement, i.e it is fired once for each row that is effected bye the triggering statement.</p>
+
+                <li>Example of row-level trigger and OUTPUT</li>
+                <p>create or replace  trigger row_level  <br>
+                    before delete on product <br>
+                    for each row <br>
+                    begin <br>
+                    dbms_output.put_line('The value is deleted '); <br>
+                    end; </p><br>
+
+        <iframe src="./images/row level1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+        <p>delete from product where p_id=101 or P_id=102;</p>
+
+        <iframe src="./images/row level call1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+        <p><b> (iii) Before trigger : </b> when before a trigger you can specify the trigger timing. That is you can specify whether the trigger action is to be excuted before or after the triggering statement.</p>
+
+        <li>Example of Before trigger and OUTPUT</li>
+        <p>create or replace trigger before_trigger <br>
+            before insert on product <br>
+            for each row <br>
+            begin <br>
+            dbms_output.put_line('The new product name is : ' ||:new.P_name); <br>
+            end;</p><br>
+             
+        <iframe src="./images/before trigg1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+
+            <p>insert into product(p_name) values('frooti'); <br>
+                insert into product(p_name) values('kitkat');</p>
+
+        <iframe src="./images/before trigger call1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+            <p><b> (iv) After trigger : </b>after trigge are fired after the triggering action is completd.</p>
+            
+            <li>Example of  After trigger and OUTPUT</li>
+            <p>CREATE OR REPLACE TRIGGER after_trigger <br>
+                AFTER UPDATE or delete  <br>
+                ON  product  <br>
+                FOR EACH ROW  <br>
+                BEGIN  <br>
+                Dbms_output.put_line('new price : ' ||:new.price) ;  <br>
+                Dbms_output.put_line('old price : ' ||:old.price) ;  <br>
+                END;</p><br>
+
+        <iframe src="./images/after trigger1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+                
+    <p>update product set price=10 where p_id=103; <br>
+    delete from product where p_id=104;</p>
+
+    <iframe src="./images/afeter trigger call1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+                
+
+                    <button onclick="history.back()">Back</button><br>
+
+
+                    </body></html>
+
+
+
+                    
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

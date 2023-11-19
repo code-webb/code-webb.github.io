@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <style>
+
+
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        b{
+            font-size: 27px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        b1{
+            font-size: 22px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: white;
+            font-weight: bold;
+        }
+        li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+        
+
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Trigger</h1>
+    <p>A database trigger is a stored program which is automatically fired or executed when some events occur. A trigger can execute in response to any of the following events: <br>A database manipulation (DML) statement like DELETE, INSERT or UPDATE.<br> A database definition (DDL) statement like CREATE, ALTER or DROP. </p>
+
+
+        <h1>Parts of Triggers</h2>
+        <p>A database trigger has two parts : <br>
+            (i) Triggering Event <br>
+            (ii) Trigger Action</p>
+        <p> When the event occurs, the database trigger fires and the PL/SQL block perfrom the action. Database trigger fire with the privilege of the owner, not the current user Therefore the owner must have appropriate access to all objects referenced by the trigger action.</p> 
+        
+        <p><b1>(i) Triggering Event : </b1> A triggering event or statement is in the SQL statement that causes a trigger to be fired. A triggering event can be an INSERT, UPDATE, or  DELETE statement on a table.</p>
+
+        <p><b1>(ii) Trigger Action : </b1> A trigger action is the procedure (PL/SQL block) that contains the sql statement and PL/SQL code to be excuted when a triggering statement is issued and the trigger restriction evaluates to TRUE.</p><br>
+
+        <li>Syntax of Trigger</li>
+        <p>CREATE [OR REPLACE] TRIGGER trigger_name <br>
+           [Before | After] <br>
+           INSERT [OR] UPDATE [OR] DELETE <br>
+           ON table_name <br>
+           For each row <br>
+           DECLARE <br>
+           variable declaration; <br>
+           BEGIN <br>
+           statement trigger action <br>
+           END;</p>
+
+           <li>Example of Trigger and OUTPUT</li>
+           <p>create table product(P_id number, p_name varchar(20), price number);</p>
+           <p>create or replace trigger t1  <br>
+            before insert or update on product  <br>
+            for each row  <br>
+            begin  <br>
+            dbms_output.put_line('new p_id : ' ||:new.p_id); <br>
+            end; </p>
+
+         <iframe src="./images/create trigger1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+           <p>insert into product(p_id) values (101); <br>
+            update product set p_id=144 where p_id=101;</p>
+
+         <iframe src="./images/call trigger1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+            <h1> Dropped a trigger</h1>
+            <p>To drop a trigger, DROP STATTEMENT is used. In order to drop a trigger.</p>
+
+            <li>Syntax of drop a trigger</li>
+            <p>DROP TRIGGER trigger_name;</p>
+
+            <li>Example of drop a trigger and OUTPUT</li>
+            <p>drop trigger t1;</p>
+
+        <iframe src="./images/drop trigger1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+        
+
+            <button onclick="history.back()">Back</button><br>
+
+           </body>
+           </html>
+
+            
+

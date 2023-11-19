@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <style>
+
+
+
+h1{
+font-family: 'Times New Roman', Times, serif;
+font-size: 35px;
+color:rgb(114, 1, 114);
+margin-top: 12px;
+}
+h1 img{
+width: 50%;
+}
+p  {
+font-size: 21px;
+font-family: 'Times New Roman', Times, serif;
+}
+li  {
+font-size: 21px;
+font-family: 'Times New Roman', Times, serif;
+color:rgb(83, 3, 83);
+font-weight: bold;
+}
+ b{
+        background-color: white;
+        padding: 5px;
+        font-size: 18px;
+     }
+    
+
+     button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+       
+
+</style>
+</head>
+<body>
+    
+    <br>
+    
+
+        <h1> Schemas Architecture and Instance</h1>
+
+        <p><b>Schemas Architecture : </b>The three schema architecture divides the database into three-level to create a separation between the physical database and the user application. In simple words, this architecture hides the details of physical storage from the user. The database administrator (DBA) should be able to change the structure of database storage without affecting the user’s view.</p>
+        <b>This architecture contains three layers or levels of the database management system:</b>
+        <p>1. External level<br>
+        2. Conceptual level<br>
+        3. Internal level<br>
+            </p><br>
+             <img src="./images/Schema-Architecture-.png"><br><br>
+
+
+
+            <li>Three Schema Architecture of DBMS</li>
+            <p><b>1. External or View level: T</b>his is the highest level of database abstraction. External or view level describes the actual view of data that is relevant to the particular user. This level also provides different views of the same database for a specific user or a group of users. An external view provides a powerful and flexible security mechanism by hiding the parts of the database from a particular user.</p>
+
+
+            <p><b>2. Conceptual or Logical level: </b>The conceptual level describes the structure of the whole database. This level acts as a middle layer between the physical storage and user view. It explains what data to be stored in the database, what relationship exists among those data, and what the datatypes are. There is only one conceptual schema per database.</p>
+             <p>Database administrator and the programmers work at this level. This level does not provide any access or storage details but concentrates on the relational model of the database.</p>
+
+
+             <p><b>3. Internal or Physical level: </b>This is the lowest level of database abstraction. It describes how the data is actually stored in the database and provides methods to access data from the database. It allows viewing the physical representation of the database on the computer system. The interface between the conceptual schema and the internal schema identifies how an element in the conceptual schema is stored and how it may be accessed.</p>
+
+                <p>If there is any change in the internal or physical schema, it needs to be addressed to the interface between the conceptual and internal schema. But there is no need to change in the interface of a conceptual and external schema.</p><br>
+
+                <h1>Instance</h1>
+                    
+                <p><b>Instance : </b>Instance or extension or database state is a collection of information that stored in a database at a particular moment is called an instance of the database. The Database instance refers to the information stored in the database at a given point of time. Thus, it is a dynamic value which keeps on changing.</p>
+                <p>Instances are the collection of information stored at a particular moment. The instances can be changed by certain CRUD operations as like addition, deletion of data. It may be noted that any search query will not make any kind of changes in the instances.</p> 
+
+                <p><b>Example : </b>Let’s say a table teacher in our database whose name is School, suppose the table has 50 records so the instance of the database has 50 records for now and tomorrow we are going to add another fifty records so tomorrow the instance have total 100 records. This is called an instance. </p><br>
+            <h1><img src="./images/instan1.png"></h1><br><br><br><br>
+
+                <button onclick="history.back()">Back</button><br>
+
+
+
+
+
+    </body>
+</html>

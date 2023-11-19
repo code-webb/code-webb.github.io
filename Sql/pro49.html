@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <style>
+
+
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      
+    p{
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p1{
+        font-size: 23px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+        
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+      
+       h3 img{
+        width: 50%;
+       }
+       
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+      <br>
+    
+
+        <h1>Union All operation </h1>
+        <p>The SQL UNION ALL operator is used to combine the result sets of 2 or more SELECT statements. It does not remove duplicate rows between the various SELECT statements (all rows are returned).</p>
+            <p>Each SELECT statement within the UNION ALL must have the same number of fields in the result sets with similar data types</p><br>
+
+        
+        <h2><li><b>Syntax Of UNION ALL OPERATION</b></li></h2>
+        <p><b>Mysql> </b>SELECT Column_Name_1 FROM Table_Name_1  <br> 
+            UNION  ALL <br>
+            SELECT Column_Name1 FROM Table_Name_2 ; </p>
+       <h3><img src="./images/UNION-ALL img.png"></h3><br>
+
+        <h2><li><b>Example of UNION ALL OPERATION</b> </h2>
+            <p1>select * from student;</p1><br>
+            <p1>select * from city;</p1><br><br>
+            <p1>select id from student unionall select cid from city;</p1><br><br><br>
+            <iframe src="./images/union alls.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+
+            <button onclick="history.back()">Back</button> <br>
+        
+        
+
+
+       
+         
+
+        
+
+
+        
+    </body>
+</html>

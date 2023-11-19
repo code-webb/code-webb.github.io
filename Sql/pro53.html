@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <style>
+
+ 
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            background-color:rgb(80, 1, 80);
+            margin-top: 12px;
+            color: white;
+            text-align: center;
+            padding: 7px;
+          }
+          
+           p{
+            font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+             font-weight: bold;
+           }
+           p1{
+            font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+           }
+            
+        b{
+            color: black;
+        }
+
+       
+       
+       button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+    </style>
+</head>
+    <body>
+        
+     <br>       
+        <h1>Queries</h1><br>
+       
+       
+        <p><b> 1) </b> How we can see existing database in mysql ?</p>
+        <p1>Show databases; </p1><br><br><br>
+        <iframe src="./queries/query1.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+        
+        <p><b> 2) </b> How we can create database ?</p>
+        <p1>create database collage; </p1><br><br><br>
+        <iframe src="./queries/query2.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+      
+   
+       <p><b> 3) </b> How we can delete database ?</p>
+       <p1>drop database collage; </p1><br><br><br>
+       <iframe src="./queries/query3.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+      
+
+       <p><b> 4) </b> How we can use existing database ?</p>
+       <p1>use collage; </p1><br><br>
+       <iframe src="./queries/query4.png" width="60%" height="200px" frameborder="2px"></iframe><br><br><br>
+       
+
+        <p><b> 5) </b> How we can create table in the database ?</p>
+        <p1>create table student( <br>
+                          Rollno int ; <br>
+                          Name varchar(20); <br>
+                          marks int ; <br>
+                          city varchar(20) <br>
+                          ); </p1><br><br>
+       <iframe src="./queries/query5.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+
+        <p><b>6) </b> How we can see Structure of  existing table ?</p>
+        <p1>desc student; </p1><br><br>
+        <iframe src="./queries/query6.png"" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+        
+        <p><b> 7) </b> How we can delete the table ?</p>
+        <p1>delete table student; </p1><br><br><br>
+        <iframe src="./queries/query7.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+
+        <p><b>8) </b> How we can insert data in the table ?</p>
+        <p1>insert into student values(1,"Ramesh",23,"delhi"); <br><br>
+                         insert into student(Rollno,marks) values(2,45);</p1><br><br>
+        <iframe src="./queries/query8.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+
+
+        <p><b>9) </b> How we can insert multiple rows in the table ?</p>
+        <p1>insert into student values(3,"mohan",45,"Chandigarh"),<br>
+          (4,"sanjeet",34,"Mumbai"),<br>
+          (5,"Ram",67,"Chandigarh"),<br>
+          (6,"Neha",56,"Mumbai");</p1><br><br>
+          <iframe src="./queries/query9.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+
+
+
+        <p><b>10) </b> How we can delete all the rows of the table ?</p>
+        <p1>delete from student; </p1><br><br>
+        <iframe src="./queries/query10.png" width="60%" height="200px" frameborder="2px"></iframe><br><br><br>
+        
+
+
+        <p><b>11) </b>To delete all the rows from the table we use DDL command ?</p>
+        <p1>truncate table student; </p1><br><br><br>
+        <iframe src="./queries/query11.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+
+         <p><b>12) </b>How we can select and extract data from the table? (all column and all rows ) ?</p>
+         <p1>select * from student; </p1><br><br><br>
+         <iframe src="./queries/query12.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+
+
+        <p><b>13) </b>To see selective column of the table (specific column, all rows) ?</p>
+        <p1>select Rollno from student; </p1><br><br><br>
+        <iframe src="./queries/query13.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+
+        <p><b>14) </b>To select specific rows of the table (all column , specific column but specific rows) ?</p>
+        <p1>select Rollno from student where Rollno = 1; </p1><br><br>
+        <iframe src="./queries/query14.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+
+        <p><b>15) </b>To delete the  specific rows of the table ?</p>
+        <p1>delete from student where Rollno = 6; </p1><br><br><br>
+        <iframe src="./queries/query15.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+       <p><b>16)</b> How we can update the data of the table ?</p>
+       <p1>update student set age = 18; </p1><br><br><br>
+       <iframe src="./queries/query16.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+      
+
+       <p><b>17) </b>To update the specific rows of the table ?</p>
+       <p1>update student set name= "Zamine" , city='Mumbai' where Rollno = 2; </p1><br><br><br>
+       <iframe src="./queries/query17.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+
+       <p><b>18) </b>Show all the record of the student where name start with A ?</p>
+       <p1>select * from student where name like 'A%' ;</p1><br><br><br>
+       <iframe src="./queries/query18.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+      
+       <p><b>19) </b> Find the record whose name is have second letter A ?</p>
+       <p1>select * from student where name like '_a%' ;</p1><br><br><br>
+       <iframe src="./queries/query19.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+
+
+       <p><b>20) </b>Find the record whose name is atleast five character ?</p>
+       <p1>select * from student where name like '_____' ;</p1><br><br><br>
+       <iframe src="./queries/query20.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+      
+
+        <p><b>21) </b>Write a query create a table with data from another table ?</p>
+        <p1>create table s1 as select * from student;</p1><br>
+        <p1>select * from s1;</p1><br><br><br>
+        <iframe src="./queries/query21.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+
+        
+
+
+        <p><b>22) </b>Write a query to just the copy Structure of the table ?</p>
+        <p1>create table s1 as select * from student where Rollno =0;</p1><br>
+        <p1>desc s1 ;</p1><br><br><br>
+        <iframe src="./queries/query22.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+
+        <p><b>23) </b>find out the name of the student who is having maximum marks ?</p>
+        <p1>select name from student where marks = (select max(marks) from student);</p1><br><br><br>
+        <iframe src="./queries/query23.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+
+      <p><b>24) </b>find the name of the student who name and width z but is marks sholud be grater then 60 ?</p>
+      <p1>select name from student where name like "%z" and marks > 60;</p1><br><br><br>
+      <iframe src="./queries/query24.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+      
+
+
+        <p><b>25) </b>find out the number of student city wise who are eligible to give vote ?</p>
+        <p1>select city,count(Rollno) from student where age > 18 group by city; </p1><br><br><br>
+        <iframe src="./queries/query25.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+        
+       <p><b>26) </b>find out the number of student city wise who are eligible to give vote show the counting descending order ?</p>
+       <p1>select city,count(age) from student where age > 17 group by city order by count(age) desc; </p1><br><br><br>
+       <iframe src="./queries/query26.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+       
+
+      <p><b>27) </b>find out unique name from the table ?</p>
+      <p1>select distinct city from student ; </p1><br><br><br>
+      <iframe src="./queries/query27.png" width="60%" height="300px" frameborder="2px"></iframe><br><br><br>
+    
+
+        <button onclick="history.back()">Back</button><br>
+        
+       
+       
+        
+    </body>
+        </html>

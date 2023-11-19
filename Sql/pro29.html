@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <style>
+
+
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      li{
+        font-size: 21px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+  
+ 
+     
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+      <br>
+    
+
+        <h1> Logical Operators</h1>
+        <p>The Logical Operators perform logical operations in the SQL, which are true or False. SQL logical operators are used to test for the truth of the condition. A logical operator like the Comparison operator returns a boolean value of TRUE, FALSE, or UNKNOWN.</p>
+
+        <h2><li>Syntax Of logical Operator</li></h2>
+        <p><b>Mysql> </b>SELECT column FROM table WHERE condition1 logical Operator condition2;</p>
+        
+       <h1>Types of logical Operator</h1>
+        <p>1. And <br>
+           2. OR <br>
+           3. NOT <br>
+           4. IN <br>
+           5. NOT IN <br>
+           6. BETWEEN <br>
+           7. IS </p>
+        
+        <p><b>1. And Operator : </b>The SQL AND operator is used with the where clause in the SQL Query. AND operator in SQL returns only those records which satisfy both the conditions in the SQL query.</p>
+        <h2><li><b>Example of And operator</b></li></h2>
+        <p>select name , age from student where age >20 and age <40; </p>
+        <iframe src="./images/and.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+  
+
+        <p><b>2. OR Operator :</b> The SQL OR operator is used with the where clause in an SQL Query. AND operator in SQL returns only those records that satisfy any of the conditions in the SQL query. </p>
+        <h2><li><b>Example of Or operator</b></li></h2>
+        <p>select * from student where rollno=1 or rollno=3;</p>
+        <iframe src="./images/or1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+  
+
+        <p><b>3. NOT operator : </b>NOT operator in SQL shows those records from the table where the criteria is not met. NOT operator is used with where clause in a SELECT query.</p>
+        <h2><li><b>Example of NOT operator</b></li></h2>
+        <p>select name from student where not name="aman";</p>
+        <iframe src="./images/not1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+        
+
+        <p><b>4. IN Operator : </b> IN Operator When we want to check for one or more than one value in a single SQL query, we use IN operator with the WHERE clause in a SELECT query.</p>
+        <h2><li><b>Example of IN Operator</b></li></h2>
+        <p>select Name from student where rollno in(1,3,5);</p>
+        <iframe src="./images/in.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+
+        <p><b>5. NOT IN operators  : </b>The NOT IN operators used to specify multiple values in a WHERE clause. NOT IN condition used to exclude the defined multiple value in a WHERE clause condition. SQL NOT IN condition also identify by NOT operator.</p>
+        <h2><li><b>Example of NOT IN operator.</b> </li></h2>
+        <p>select name from student where name not in("aman", "anshika");</p>
+        <iframe src="./images/not in1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <p><b>6. BETWEEN Operator : </b> This operator displays the records which fall between the given ranges in the SQL query. The results of the BETWEEN operator include begin and end values of the given range.</p>
+        <h2><li><b>Example of Between operator</b></li></h2>
+        <p>select Name , Marks from student where marks between 20 and 30;</p>
+        <iframe src="./images/between1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <p><b>7. IS Operator : </b>IS operator are used to not applicable or missing information, therefore, you cannot use the comparison operators (=, >,<, etc.,) to check whether a value is NULL or not.</p>
+        <p>The  IS NULL returns TRUE if the expression is NULL, otherwise it returns FALSE.</p>
+        <h2><li><b>Example of  IS operator</b></li></h2>
+        <p>select Rollno , Name from student where name is null;</p>
+        <iframe src="./images/is1.png"" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <p>If you use the NOT operator, the expression returns a TRUE if the expression is not NULL, otherwise it returns FALSE. Remember that the NOT operator is used to inverse the predicate.</p>
+        <h2><li><b>Example of  IS NOT operator</b></li></h2>
+        <p>select Rollno , Name from student where name is not null;</p>
+        <iframe src="./images/is not null1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+
+        <button onclick="history.back()">Back</button> 
+
+       
+
+        
+    </body>
+</html>

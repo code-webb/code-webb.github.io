@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <style>
+
+  
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          p{
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        p1{
+            font-size: 23px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+           
+
+            b{
+            background-color: white;
+            padding: 2px;
+        }
+        li{
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+    </style>
+</head>
+    <body>
+        
+     <br>       
+
+         <h1>Special operators in sub queries</h1>
+<p> In Sql, there are some special operators used in subqueries to perfrom specific tasks. These operators are : <br>
+    (i) EXISTS <br>
+    (ii) ANY <br>
+    (iii) SOME  <br>
+    (iv)  ALL</p><br>
+
+
+    <p><b> 1. EXISTS : </b> This operators is used to check for the existence of values. It produces a BOOLEAN result (TRUE/FALSE). It takes a subqauery as an argument and evalutes it to TRUE if the subquery produces any output and FALSE, if the subquery does not not produce any output.</p>
+
+<li><b>Example of EXISTS operator</b></li><br>
+<p1>select * from person <br><br>
+   where person_age=34 and EXIST (select count(*) from person where personID=34);</p1><br><br><br>
+   <iframe src="./images/nested operation exsits.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+
+<p><b> 2. ANY : </b> The any operator compares the lowest value from the set .</p>
+
+<li><b>Example of  ANY operator</b></li><br>
+<p1>select person_name from person <br><br>
+    where person_age >  ANY (select person_age from person);</p1><br><br><br>
+    <iframe src="./images/nested operation Any1.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+
+<p><b> 3. SOME : </b> The some operator works same like ANY operator i.e. It compares the lowst value from the set. this means both ANY and SOME operator are equivalent.</p>
+
+<li><b>Example of  SOME operator</b></li><br>
+<p1>select person_name from person <br><br>
+    where person_age >  SOME (select person_age from person);</p1><br><br><br>
+    <iframe src="./images/nested operation some1.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+
+<p><b> 4. ALL : </b> The all operator compares the highest value from the set.</p>
+
+<li><b>Example of  ALL operator</b></li><br>
+<p1>select person_name from person <br><br>
+    where person_age >  ALL (select person_age from person wher person_age=34);</p1><br><br><br>
+    <iframe src="./images/nested operation All1.png" width="65%" height="325px" frameborder="2px"></iframe><br><br><br>
+
+
+<button onclick="history.back()">Back</button>  <br>
+
+
+
+
+
+
+
+  
+
+    </body>
+</html>

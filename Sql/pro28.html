@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <style>
+
+
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      li{
+        font-size: 21px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+  
+     
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+     <br>
+
+        <h1>Relational Operator</h1>
+        <p>Relational operator when Being conditional takes two expressions, makes a useful comparison, and returns either True or False. It does the operations such as equal to, lesser than, greater than, or greater than similar to and other advanced concepts. This Operator joins their hands with the ‘where’ clause to select the particular columns in the records.</p>
+
+        <h2><li><b>Syntax Of Relational Operator</b></li></h2>
+        <p><b>Mysql> </b>SELECT column FROM table WHERE condition1 Relational Operator condition2;</p>
+        
+       <h1>Types of Relational Operator</h1>
+        <p>1. Equal to (=)<br>
+           2. Not equal (<>)<br>
+           3. Greater than (>)<br>
+           4. Greater than equal to (> =)<br>
+           5. Lesser than (<)<br>
+           6. Lesser than or Equal to (<=)</p><br>
+       
+        
+        <p><b>1. Equal to (=):</b> This Operator checks whether the value of the two operands is the same. If it is equal, it returns true; if not, it returns false. </b></p>
+        <h2><li><b>Example of equal to operator</b></li></h2>
+        <p>select emp_name from employee where emp_id=101;</p>
+        <iframe src="./images/equal1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <p><b>2. Not equal (<>) :</b> It verifies whether the two operands’ values are equal or not. If they are not identical, then the statement returns True. </b></p>
+        <h2><li><b>Example of Not equal operator</b></li></h2>
+        <p>select emp_name , emp_salary from employee where emp_salary<>10000;</p>
+        <iframe src="./images/not equal1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <p><b>3. Greater than : </b>It is used in SQL to check for the more significant value between two operands.</p>
+        <h2><li><b>Example of Greater than  operator</b></li></h2>
+        <p>select emp_name from employee where emp_salary > 20000;</p>
+        <iframe src="./images/greater than1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <p><b>4. Greater than equal to : </b> It is used in SQL to check for the greater than or equal to a value between two operands.</p>
+        <h2><li><b>Example of Greater than equal to  operator</b></li></h2>
+        <p>select emp_name , emp_salary from employee where emp_salary >= 30000;</p>
+        <iframe src="./images/greter than equal to1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <p><b>5. Lesser than : </b>This Operator in SQL checks whether a left operand is lesser than the right operand. If it is true, it results in the result.</p>
+        <h2><li><b>Example of Lesser than operator</b></li></h2>
+        <p>select emp_name from employee where emp_salary < 20000;</p>
+        <iframe src="./images/less than1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <p><b>6. Lesser than or Equal to : </b>This Operator in SQL checks whether a left operand is lesser than or equal to the right operand. If it is true, it results in the result.</p>
+        <h2><li><b>Example of Lesser than or Equal to operator</b></li></h2>
+        <p>select emp_name , emp_salary from employee where emp_salary <= 30000;</p>
+        <iframe src="./images/less than equal to1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <button onclick="history.back()">Back</button> 
+        <br>
+
+        
+    </body>
+</html>

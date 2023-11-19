@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <style>
+
+
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+        b1{
+            font-weight: bold;
+            font-size: 24px;
+            background-color: white;
+        }
+        
+        
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+        
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Decision control structure</h1>
+
+    <p>The structure of the PL/SQL IF Statement is similar to the structure of IF Statement in other Procedural Language. It allows PL/SQL to perfrom actions selectively based on conditions.<br><br>
+    <b>There are three forms of IF Statement : </b><br>
+    (i) IF- THEN Statement<br>
+    (ii) IF- THEN- ELSE Statement<br>
+    (iii) IF- THEN- ELSIF Statement</p><br>
+
+    <p><b1>(i) IF- THEN Statement : </b1>if then statement if then statement is the most simple decision-making statement. It is used to decide whether a certain statement or block of statements will be executed or not i.e if a certain condition is true then a block of statement is executed otherwise not.</p>
+
+    <li>The Syntax of IF- THEN Statement </li>
+    <p>IF condition THEN  <br> 
+        statement;  <br>
+        END IF; </p><br>
+
+    <li>The Example of IF- THEN Statement and OUTPUT </li>
+    <p>declare <br>
+        a number;  <br>
+        b number;   <br>
+        begin      <br>
+        a := 10;  <br>
+        b := 5;   <br>
+        if a>b then  <br>
+        dbms_output.put_line('A is greater than B'); <br>
+        end if;  <br>
+        end;</p><br>
+
+        <iframe src="./images/if1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br>
+    
+    <p><b1> (ii) IF- THEN- ELSE Statement : </b1>The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it won’t. Here comes the else statement. We can use the else statement with if statement to execute a block of code when the condition is false.</p>
+
+    <li>The Syntax of IF- THEN- ELSE Statement </li>
+    <p>IF condition THEN <br>
+       statement; <br>
+       ELSE <br>
+       Statement; <br>
+       END IF;</p>  <br>
+
+       <li>Table : student</li>
+       <p>select * from student;</p>
+       <iframe src="./images/student table1.png" width="60%" height="300px" frameborder="1px"></iframe><br><br><br>
+
+       <li>The Example of IF- THEN- ELSE Statement and OUTPUT</li>
+       <p>declare <br>    
+        age number;  <br>  
+        begin     <br>
+        select age into age from student where rollno=4;  <br> 
+        if age>18 then    <br>
+        dbms_output.put_line(age ||' Eligible to vote');   <br> 
+        else   <br>
+        dbms_output.put_line(age ||' not Eligible to vote');  <br>     
+        end if;  <br>  
+        end;</p>
+
+       <iframe src="./images/ifelse1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br>
+    
+    
+        
+
+       <p><b1>(iii) IF- THEN- ELSIF Statement : </b1>The IF-THEN-ELSIF statement allows you to choose between several alternatives. An IF-THEN statement can be followed by an optional ELSIF...ELSE statement. The ELSIF clause lets you add additional conditions.</p>
+
+       <li>The Syntax of IF- THEN- ELSIF Statement </li>
+       <p>IF condition THEN <br>
+          statement; <br>
+          ELSIF condition THEN <br>
+          statement; <br>
+          ELSE <br>
+          statement;
+          END IF;</p>  <br>
+
+          <li>The Example of IF- THEN- ELSIF Statement and OUTPUT </li>
+          <p>declare  <br>   
+            num number := 20;  <br>    
+            begin     <br>   
+            if num>18 then    <br> 
+            dbms_output.put_line(num || ' number greater than 18 ');   <br>
+            elsif num<18 then  <br>
+            dbms_output.put_line(num ||' number less than 18 ');   <br>    
+            else    <br>
+            dbms_output.put_line('number is not matched' );  <br>      
+            end if;     <br>
+            dbms_output.put_line('Exact value of number : ' || num );  <br>      
+            end; </p><br>
+
+            <iframe src="./images/elseif1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+           
+
+          <button onclick="history.back()">Back</button><br>
+
+          </body>
+          </html>
+
+          
+

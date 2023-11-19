@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <style>
+
+
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+
+       
+
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+        
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Function</h1>
+
+    <p>The PL/SQL Function is very similar to PL/SQL Procedure. The main difference between procedure and a function is, a function must always return a value, and on the other hand a procedure may or may not return a value. Except this, all the other things of PL/SQL procedure are true for PL/SQL function too.</p>
+
+    <li>Syntax of Create a function</li><br>
+    <p>CREATE [OR REPLACE] FUNCTION function_name <br>
+       [(parameter1 [mode 1] datatype1, <br>
+       parameter2 [mode 2] datatype2, <br>
+       .....)]  
+       RETURN datatype IS <br>
+       BEGIN <br>
+       PL/SQL executed statements <br>
+       [Exception <br>
+          Exception handlers] <br>
+        END [function_name];
+       </p><br>
+
+       <li>Example of Create a function and OUTPUT</li>
+       <p>create or replace function fun(x number, y number) <br>
+        return number IS <br>
+        z number; <br>
+        begin <br>
+        dbms_output.put_line('Its is a function');  <br>  
+        return x+y+100; <br>
+        end fun;</p><br>
+
+        <iframe src="./images/function created1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+       <h1>Calling a function</h1>
+    <p>A function may accept one or many parameters, but must return a single value. you invoke function as part of PL/SQL expression, using variable to hold the returned value.</p><br>
+
+    <li>Example of calling a function and OUTPUT</li>
+    <p>begin  <br>
+      Dbms_output.put_line('The result is : '||fun(10,20)); <br>
+      end;</p><br>
+
+      <iframe src="./images/calling function1.png" width="60%" height="270px" frameborder="1px"></iframe><br><br><br>
+
+    <h1>Dropping a function</h1>
+    <p>To drop a function, DROP FUNCTION statement is used. In order to drop a function, One must either own the function or have DROP ANY PROCEDURE system privilege.</p><br>
+
+    <li>Syntax of Drop a function</li>
+    <p>DROP FUNCTION function_name;</p><br>
+
+    <li>Example of Drop a Function and OUTPUT</li>
+    <p>drop function fun;</p>
+
+    <iframe src="./images/drop function1.png" width="60%" height="270px" frameborder="1px"></iframe><br><br><br>
+
+
+    <button onclick="history.back()">Back</button><br>
+
+    </body>
+    </html>
+
+
+

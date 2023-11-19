@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <style>
+
+
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+
+          b{
+            background-color: white;
+            font-size: 22px;
+          }
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+       
+        
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+        
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Argument Modes</h1>
+
+    <p>Argument modes are used to defined the behaviour of formal parameters. There are three argument modes to beused with any subprograms (procedure or function).</p>
+    <p>(i) IN mode <br>
+      (ii) OUT mode <br>
+      (iii) IN OUT mode <br> </p>
+      <h2><img src="./images/modes.png"> </h2><br><br>
+
+      <p><b>(i) IN mode :  </b> It is the default argument mode in subprogram. This mode passes a constant value from the calling environment into the subprogram.</p>
+
+      <li>Example of IN mode : PROCEDURE and OUTPUT</li>
+      <p>declare <br>
+         z number;<br>
+         procedure Pro(x IN number, y IN number) IS <br>
+         begin <br>
+         Dbms_output.put_line('Its a procedure'); <br>
+         z := x+y; <br>
+         end Pro; <br>
+         begin <br>
+         Pro(25,25); <br>
+         Dbms_output.put_line('The value of z : '||z);  <br>
+         end;<br>
+         </p>
+
+         <iframe src="./images/in procedure1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+      
+
+      <li>Example of IN mode : FUNCTION and OUTPUT</li>
+       <p>declare <br>
+        c number;  <br>  
+        function fun(a IN number, b IN number) <br>
+        return number IS   <br> 
+        begin   <br>
+        Dbms_output.put_line('Its a function');  <br>   
+        c := a-b;  <br>
+        return (c); <br>
+        end fun; <br>
+        begin   <br>
+        Dbms_output.put_line('The value of c : '||fun(300,200)); <br>
+        end;</p><br>
+      
+        <iframe src="./images/in function1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+
+      <p><b>(ii) OUT mode : </b> This mode passes a value from the subprogram (procedure) to the calling environment.</p>
+
+      <li>Example of OUT mode : PROCEDURE and OUTPUT</li>
+      <p>declare <br>
+        num number;   <br>   
+        Procedure Pro (x OUT number) IS   <br>    
+        begin  <br>
+        Dbms_output.put_line('Its a Procedure');   <br> 
+        x := 100;<br>
+        end Pro; <br>
+        begin <br>
+        Pro(num); <br>
+        Dbms_output.put_line('The output is : '||num);<br>
+        end;</p> <br>
+       
+        <iframe src="./images/out procedure1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+      <li>Example of OUT mode : FUNCTION and OUTPUT</li>
+      <p>declare  <br>
+        num number := 10; <br>   
+        function fun(a OUT number) <br>
+        return number IS  <br>    
+        begin  <br>
+        Dbms_output.put_line('Its a function');  <br> 
+        a := num; <br>
+        return(a);  <br>
+        end fun;  <br>
+        begin <br>
+        Dbms_output.put_line('The output is : '||fun(num));<br>
+        end; </p><br>
+
+        <iframe src="./images/out function1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+
+      <p><b>(iii) IN OUT mode : </b> This mode is a mixture of both IN n=and OUT mode. Just like IN mode it passes a value from the calling environment in subprogram and like a OUT mode it possibly pass different value from the subprogram back to the calling environment using the same parameter.</p>
+
+      <li>Example of IN OUT mode : PROCEDURE and OUTPUT</li>
+      <p>declare  <br>
+        x number; <br>  
+        procedure Pro(num IN OUT number) IS   <br>   
+        begin  <br>
+        Dbms_output.put_line('Its a Procedure'); <br> 
+        num := num+x; <br>
+        end Pro; <br>
+        begin  <br>
+        x := 50;  <br>   
+        Pro(x);  <br> 
+        Dbms_output.put_line('The output is : '||x); <br>
+        end;</p><br>
+
+        <iframe src="./images/in out procedure1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+
+      <li>Example of IN OUT mode : FUNCTION and OUTPUT</li>
+      <p>declare  <br>
+        x number;  <br>  
+        Function fun(num IN OUT number) <br>
+        return number IS  <br>    
+        begin <br>
+        Dbms_output.put_line('Its a function'); <br>  
+        num := x;  <br>
+        return (num);  <br>
+        end fun;  <br>
+        begin  <br>
+        x := 50; <br>       
+        Dbms_output.put_line('The output is : '||fun(x)); <br>
+        end;</p> <br>
+
+        <iframe src="./images/in out function1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+      <button onclick="history.back()">Back</button><br>
+
+      </body>
+      </html>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

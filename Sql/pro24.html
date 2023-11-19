@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <style>
+
+
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      li{
+        font-size: 21px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+  
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+      <br>
+
+        <h1>Update statement</h1>
+        <p>The SQL commands (UPDATE and DELETE) are used to modify the data that is already in the database. The SQL DELETE command uses a WHERE clause.</p>
+
+        <p>UPDATE statement is used to change the data of the records held by tables. Which rows is to be update, it is decided by a condition. To specify condition, we use WHERE clause.</p>
+       
+        
+        <h2><li><b>Syntax Of Update statement</b></li></h2>
+        <p><b>Mysql> </b>UPDATE table_name SET [column_name1= value1,... column_nameN = valueN] WHERE condition ; 
+        </p>
+        
+        <h2><li><b>Example of Update statement</b></li></h2>
+        <p>update student set rollno=1 where rollno=2;</p>
+        <p>select * from student;</p>
+        <iframe src="./images/update single row1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br>
+
+        <button onclick="history.back()">Back</button> 
+      <br>
+
+
+        
+    </body>
+</html>

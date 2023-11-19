@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <style>
+
+
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+        li{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        b{
+            font-size: 22px;
+            background-color: white;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+        
+        
+button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+
+</style>
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1> PL/SQL Block structure  </h1>
+    <p>PL/SQL is a block-structured language. This means that programs can be divided into logical blocks.<br>
+    A PL/SQL block consists of up to three sections : <br>
+    (i) Declarative<br>
+    (ii) Executable<br>
+    (iii) Exception Handling</p>
+
+    <img src="./images/blockstructured1.png"><br><br>
+    
+
+
+    <p><b>(i) Declarative : </b>This is the first section of the PL/SQL blocks. This section is an optional part. This is the section in which the declaration of variables, cursors, exceptions, subprograms, pragma instructions and collections that are needed in the block will be declared. Below are few more characteristics of this part.</p>
+
+    <li>This particular section is optional and can be skipped if no declarations are needed.</li>
+    <li>This should be the first section in a PL/SQL block, if present.</li>
+    <li>This section starts with the keyword ‘DECLARE’ for triggers and anonymous block. For other subprograms, this keyword will not be present. Instead, the part after the subprogram name definition marks the declaration section</li>
+    <li>This section should always be followed by execution section.</li><br>
+
+    <p><b>(ii)  Executable :  </b>Execution part is the main and mandatory part which actually executes the code that is written inside it. Since the PL/SQL expects the executable statements from this block this cannot be an empty block, i.e., it should have at least one valid executable code line in it. Below are few more characteristics of this part.</p>
+
+    <li>This can contain both PL/SQL code and SQL code.</li>
+    <li>This can contain one or many blocks inside it as a nested block.</li>
+    <li>This section starts with the keyword ‘BEGIN’.</li>
+    <li>This section should be followed either by ‘END’ or Exception-Handling section (if present)</li><br>
+
+
+    <p><b>(iii) Exception Handling : </b>The exception is unavoidable in the program which occurs at run-time and to handle this Oracle has provided an Exception-handling section in blocks. This section can also contain PL/SQL statements. This is an optional section of the PL/SQL blocks.</p>
+
+    <li>This is the section where the exception raised in the execution block is handled.</li>
+    <li>This section is the last part of the PL/SQL block.</li>
+    <li>Control from this section can never return to the execution block.</li>
+    <li>This section starts with the keyword ‘EXCEPTION’.</li>
+    <li>This section should always be followed by the keyword ‘END’.</li><br><br><br><br>
+
+
+    <button onclick="history.back()">Back</button><br>
+
+
+    </body>
+    </html>
+
+        
+        

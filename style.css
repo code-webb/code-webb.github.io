@@ -1,0 +1,62 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+#banner{
+    background: url(./images/bg3.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 120vh;
+
+}
+img{
+    width: 170px;
+    height: 100px;
+    float: left;
+    margin-left: 12px;
+    margin-top: 1px;
+}
+h1{
+    background-color:  rgb(95, 2, 95);
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+
+}
+ul li {
+    float: left;
+    width:323.4px;
+    background-color: rgb(126, 2, 126);
+    text-align: center;
+    list-style: none;
+    font-size: 25px;
+    line-height: 60px;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+   
+}
+ul li:hover{
+    background-color: rgb(95, 2, 95);
+}
+ul li ul li {
+    display: none;
+}
+ul li:hover ul li {
+    display: block;
+}
+li details summary{
+    color: white;
+}
+p{
+    color: white;
+    font-size: 20px;
+}
+button{
+    width: 12px;
+    height: 12px;
+}

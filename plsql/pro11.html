@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <style>
+
+  
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+
+       
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+        
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Procedure</h1>
+
+    <p>A procedure or stored procedure i a named PL/SQL block that can accept parameters, and be invoked. Generally speaking, a procedure is mainly used to perfrom one or more specific task. A procedure has a header, a declaration section an  executable section, and an optional exception-handling section.<br>
+    A procedure can be complied and stored in the Database as a schema object. procedure promote reusability and maintainability. when validated, they can be used in any number of apllication. if the requriements change, only the procedure needs to be updated.</p>
+    <p> You can create a new procedure with the CREATE PROCEDURE statement, which may decalare a list of parameters and must define the actions to be performed by the standard PL/SQL block. The CREATE clause enables you to create stand-alone procedure, which are stroed in an oracle Database.</p><br>
+
+    <li>Syntax of Create a Procedure</li><br>
+    <p>CREATE [OR REPLACE] PROCEDURE procedure_name <br>
+       [(parameter1 [mode 1] datatype1, <br>
+       parameter2 [mode 2] datatype2, <br>
+       .....)]  IS <br>
+       BEGIN <br>
+       PL/SQL executed statements <br>
+       [Exception <br>
+          Exception handlers] <br>
+        END [procedure_name];
+       </p><br>
+
+
+    <li>Example of Create a Procedure and OUTPUT</li>
+    <p>create or replace procedure Pro <br>
+      (x number, y number) IS  <br>
+      s number;  <br>
+      begin  <br>
+      s := x+y;  <br>
+      Dbms_output.put_line('Sum of x and y : '||s); <br> 
+      end Pro;  </p><br>
+
+      <iframe src="./images/create procedure1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+    <h1>Calling a Procedure</h1>
+    <p>A procedure is called as a PL/SQL statement. A procedure can be called from any PL/SQL program by giving its names followed by the parameters.</p>
+    
+    <li>Example of Calling a Procedure and OUTPUT</li>
+    <p>begin <br>
+      pro(10,20);<br> 
+      end;</p><br>
+
+      <iframe src="./images/calling procedure1.png" width="60%" height="270px" frameborder="1px"></iframe><br><br><br>
+
+    <h1>Dropping a Procedure</h1>
+    <p>To drop a procedure, DROP PROCEDURE statement is used. In order to drop a procedure, one must either own the procedure or have DROP ANY PROCEDURE system privilege.</p>
+    
+    <li>Syntax of Drop a Procedure</li>
+    <p>DROP PROCEDURE procedure_name;</p><br>
+
+     <li>Example of Drop a Procedure and OUTPUT </li>
+     <p>drop procedure pro;</p>
+
+     <iframe src="./images/drop preocdure1.png" width="60%" height="270px" frameborder="1px"></iframe><br><br><br>
+
+
+
+ <button onclick="history.back()">Back</button>
+
+
+ </body></html>

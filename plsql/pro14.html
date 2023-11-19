@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <style>
+
+
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+        
+
+        
+        b1{
+            font-weight: bold;
+            font-size: 24px;
+            background-color: white;
+        }
+        b{
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Package</h1>
+    <p>A package is a way of logically storing the subprograms like procedures, functions, exception or cursor into a single common unit. A package can be defined as an oracle object that is compiled and stored in the database.</p>
+
+    <b>Advantages Of Package</b>
+    <p><b1>1.</b1>It gives modularity to our code.  <br>
+       <b1>2.</b1>It helps to design the application easily. <br>
+       <b1>3.</b1> PLSQL Package helps to hide information with the help of public and private items, data types, and subprograms.  <br>
+       <b1>4.</b1>package allows maintaining information over all the transactions without requiring to store it in the database.  <br>
+      <b1>5.</b1> Packages help improve performance of execution.</p>
+      </p>
+    
+    <h1>To create a package we create two things : </h1>
+      <p>(i) Package specification <br>
+       (ii) Package body</p><br>
+    <h2><img src="./images/package.png"></h2><br><br>
+
+
+    <p><b1> (i) Package specification : </b1>In package specification we can declare the named procedure and named function. Package specification consists of a declaration of all the public variables, cursors, objects, procedures, functions, and exception.The elements which are all declared in the specification can be accessed from outside of the package. Such elements are known as a public element. The package specification is a standalone element that means it can exist alone without package body.</p> 
+    
+    <li>Syntax of Package specification </li>
+    <p> CREATE [OR REPLACE] PACKAGE package_name IS <br>
+        procedure_specification; <br>
+        Function_specification;<br>
+        exception_declaration; <br>
+        END [package_name]; </p> <br>
+
+        <p><b1>(ii) Package body : </b1>It consists of the definition of all the elements that are present in the package specification. It can also have a definition of elements that are not declared in the specification, these elements are called private elements and can be called only from inside the package.</p> 
+        
+        <li>Syntax of Package body </li>
+    <p> CREATE [OR REPLACE] PACKAGE  BODY package_name IS <br>
+        procedure_defination; <br>
+        Function_defination;<br>
+        [EXCEPTION <br>
+        exception_handlers]; <br>
+        END [package_name]; </p> <br>
+
+
+        <li>Example of Package specification and OUTPUT</li>
+        <p>create or replace package pack As  <br>
+          procedure p1(x number); <br>
+          function fun(y number) return number; <br>
+          end pack; </p><br>
+
+        <iframe src="./images/package created1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+         <li>Example of Package body and OUTPUT </li>
+          <p>create or replace package body pack As<br><br> 
+            procedure P1(x NUMBER) IS    <br>
+            begin   <br>  
+            dbms_output.put_line('Its a procedure'); <br>
+            Dbms_output.put_line('The procedure output is : '||x); <br> 
+            end P1;  <br>
+             <br>
+            function fun(y number) return number IS  <br>
+            num number := 100; <br>     
+            begin  <br>
+            Dbms_output.put_line('Its a function');  <br>    
+            num := y+num;  <br>
+            return(num);  <br>
+            end fun;  <br>
+             <br>
+            end pack; <br> </p>
+
+        <iframe src="./images/package body1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+            <h1>Call a package</h1>
+            <li>Example of call Package and OUTPUT</li>
+            <p>begin  <br>
+              pack.p1(40); <br>
+              dbms_output.put_line('The fuction output is : '||pack.fun(100)); <br>
+              end;</p>
+
+        <iframe src="./images/call package1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+              <h1>Drop a package</h1>
+              <li>Example of drop a Package and OUTPUT</li>
+              <p>drop package pack;</p>
+
+        <iframe src="./images/drop package1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+              <button onclick="history.back()">Back</button><br>
+
+              </body>
+              </html>
+
+
+
+          

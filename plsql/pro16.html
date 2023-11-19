@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <style>
+
+
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          
+       
+        p{
+            font-size: 21px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       
+        b{
+    
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        b1{
+    
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+}
+b2{
+    color: rgb(116, 65, 42);
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+        li{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-weight: bold;
+        }
+
+        
+
+        
+
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+        
+        
+    </style>
+</head>
+    <body>
+     <br>
+      
+
+    <h1>Types Of Exception Handling</h1>
+    <p>An exception is an error which disrupts the normal flow of program instructions. PL/SQL provides us the exception block which raises the exception thus helping the programmer to find out the fault and resolve it.</p>
+
+<li>Syntax of Exception Handling</li>
+<p>DECLARE <br>
+declarations section;<br>
+BEGIN  <br>
+executable command(s); <br>
+EXCEPTION  <br>
+WHEN exception1 THEN <br>
+statement1;  <br>
+WHEN exception2 THEN <br>
+statement2;  <br>
+[WHEN others THEN]  <br>
+/* default exception handling code */ <br>
+END; <br>
+    
+    </p>
+
+
+
+    <h1>There are two types of exceptions defined in PL/SQL</h1>
+       <p><b>(i)</b> Predefined exceptions<br>
+        <b>(ii)</b>User defined exception.</p><br>
+        <h1><img src="./images/types of exception handling.png"></h1><br><br>
+
+
+  <p><b2>(i) Predefined exceptions : </b2>These exceptions are predefined in PL/SQL which get raised WHEN certain database rule is violated.</p>
+    <li>Predefined exceptions are further divided into two categories:</li> 
+    <p>Named Predefined exceptions.<br>
+    Unnamed Predefined exceptions.</p>  
+    
+    <p><b>1. Named Predefined xceptions: </b>They have a predefined name by the system like ACCESS_INTO_NULL, DUP_VAL_ON_INDEX, LOGIN_DENIED etc.</p>
+
+    <p><b1>1. NO_DATA_FOUND: </b1> It is raised WHEN a SELECT INTO statement returns no rows.</p>
+    <li>Example of NO_DATA_FOUND exception and OUTPUT</li>
+    <p>Select* from student;</p>
+
+    
+    <iframe src="./images/student table1.png" width="60%" height="270px" frameborder="1px"></iframe><br><br><br>
+
+    <p>declare   <br>
+        srol number;  <br>
+        begin  <br>
+        select rollno into srol from student where rollno=5;  <br>
+        Dbms_output.put_line(srol);  <br>
+        Exception  <br>
+        when NO_DATA_FOUND then  <br>    
+        Dbms_output.put_line('The rollno is does not exist');  <br>
+        end;</p><br>
+          
+        <iframe src="./images/nodatafound1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+
+        <p><b1>2. TOO_MANY_ROWS : </b1>It is raised WHEN a SELECT INTO statement returns more than one row.</p>
+        <li>Example of TOO_MANY_ROWS  exception and OUTPUT</li>
+        <p>DECLARE <br>
+            sname varchar(20); <br>
+            
+         BEGIN <br>
+            
+            SELECT name into  sname from student; <br>
+            dbms_output.put_line(sname); <br>
+            
+         EXCEPTION <br>
+            WHEN too_many_rows THEN <br>
+               dbms_output.put_line('error SELECT too many rows'); <br>
+            
+         end;</p><br>
+
+         <iframe src="./images/tomanyrow1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+        
+
+        <p><b1>3. ZERO_DIVIDE : </b1> it is raises exception WHEN dividing with zero.</p>
+        <li>Example of ZERO_DIVIDE exception and OUTPUT</li>
+        <p>DECLARE <br>
+            a number :=20; <br>
+            b number :=0; <br>
+            c number; <br>
+            
+         BEGIN <br>
+            c:=a/b; <br>
+            dbms_output.put_line('the result of division is : '||c); <br>
+            
+         exception <br>
+            WHEN zero_divide THEN <br>
+               dbms_output.put_line('dividing by zero please check value'); <br>
+               dbms_output.put_line('the value of a is :  '||a); <br>
+               dbms_output.put_line('the value of b is : '||b); <br>
+         END;</p><br>
+          
+         <iframe src="./images/dividebyzero1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+        
+
+         <p><b>2. unamed Predefined exception : </b>Oracle doesn’t provide name for some system exceptions called unnamed system exceptions.These exceptions don’t occur frequently.These exceptions have two parts code and an associated message.The way to handle to these exceptions is to assign name to them using Pragma EXCEPTION_INIT.</p>
+
+         <li>Syntax of unamed Predefined exception</li>
+         <p>PRAGMA EXCEPTION_INIT(exception_name, -error_code);</p><br>
+
+         <p><b2>(ii) User defined exception : </b2>These exceptions are predefined in PL/SQL which get raised WHEN certain database rule is violated.</p>
+
+         <li>Syntax of user defined exception</li>
+         <p>DECLARE <br>
+            exception_name EXCEPTION; <br>
+        BEGIN <br>
+            statement(s); <br>
+            IF condition THEN <br>
+                RAISE exception_name;  <br>
+            END IF; <br>
+        EXCEPTION <br>
+            WHEN exception_name THEN <br>
+                User defined statement ; <br> 
+        END;</p><br>
+
+         <li>Example of user defined exception and OUTPUT</li>
+         <p>declare<br>
+            x number ;<br>
+            e1 exception;<br>
+            begin<br>
+            x := 100;  <br>     
+            if (x = 100) then <br>
+            raise e1;   <br>
+            end if;<br>
+            exception<br>
+            when e1 then<br>
+            dbms_output.put_line('the x value is equal to 100');<br>
+            end;</p><br>
+            
+        <iframe src="./images/userdefiendex1.png" width="60%" height="350px" frameborder="1px"></iframe><br><br><br>
+    
+
+            <button onclick="history.back()">Back</button>
+
+            </body>
+            </html>
+
+
+

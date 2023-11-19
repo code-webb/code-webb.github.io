@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+
+  
+       
+       h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color:rgb(114, 1, 114);
+            margin-top: 12px;
+          }
+          p{
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        p1{
+            font-size: 23px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+          
+           
+
+            b{
+            background-color: white;
+            padding: 2px;
+        }
+        li{
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+</style>
+    </style>
+</head>
+    <body>
+        
+      <br>       
+
+         <h1>Introduction to Nested Query</h1>
+<p> Nested  Query is a query with in another query. SQl has an ability to nest queries with in one another . A subquery is a SELECT Statement that is nested with in another SELECT statement and which returns intermediate results. The result of Subquery or inner query is dynamically substituted in the condition of outer query. SQL first evalutes the inner query or subquery with in the WHERE clause. The result of inner query is then substitued in the condition of the outer query. <br>
+Most of the time ,a subquery is used when you know how to search for a value using a SELECT statement, but do not know the exact value.</p><br>
+
+
+
+
+<li><b>Example of Nested Query</b></li><br>
+<p1>select * from person;</p1><br><br>
+<p1>select person_name from person where person_age =(select person_age from person where person name="aman");</p1><br><br>
+
+<iframe src="./images/nestedquery1.png" width="65%" height="350px" frameborder="2px"></iframe><br><br><br>
+
+<p1><p1>select person_name from person where person_age =(select max(person_age ) from person);</p1><br><br>
+<p1><p1>select person_name, person_age where person_age in (select min(person_age ) from person group by person_age);</p1><br><br>
+<iframe src="./images/nestedquery22.png" width="65%" height="350px" frameborder="2px"></iframe><br><br><br>
+
+
+<button onclick="history.back()">Back</button>  <br>
+
+
+
+
+
+
+
+  
+
+    </body>
+</html>

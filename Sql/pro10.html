@@ -1,0 +1,77 @@
+<html>
+<head>
+    <style>
+
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+
+      
+      p{
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+   
+        li{
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+
+</style>
+</head>
+    <body>
+        
+     <br>
+    
+        <h1>Create table with data from another table </h1>
+<p>To create a table from another we will used to create command with select command.We can create a copy of an existing table using the create table command. The new table gets the same column signature as the old table. We can select all columns or some specific columns.If we create a new table using an old table, the new table will be filled with the existing value from the old table.</p>
+
+<li><b>Syntax Of Create table with data from another table</b></li>
+<p>Mysql> CREATE TABLE newtable_name AS SELECT * FROM oldtable_name [WHERE] ; </p>
+
+<li><b>Example of Create table with data from another table</b></li>
+<p>create table s1 as select * from student;</p>
+<p>select * from s1;</p>
+
+<iframe src="./images/create table with data1.png" width="65%" height="400px" frameborder="2px" ></iframe><br><br><br>
+
+
+<h1> create structure of  table with from another table </h1>
+<p>To create a sturcture table  from another we will used to create command with select command.We can create a copy of an existing table structure  using the create table command.</p>
+
+<li><b>Example of Create structure of table with from another table</b></li>
+<p>create table s2 as select * from student where rollno=0;</p>
+<p>select * from s2;</p>
+
+<iframe src="./images/createtablestucture2.png" width="65%" height="400px" frameborder="2px" ></iframe><br><br><br>
+
+<button onclick="history.back()">Back</button> <br>
+
+
+
+ 
+
+
+    </body>
+</html>

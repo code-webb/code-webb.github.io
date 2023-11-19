@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <style>
+
+
+   
+   h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:rgb(114, 1, 114);
+        margin-top: 12px;
+      }
+      li{
+        font-size: 21px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 23px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+     h2 li  {
+             font-size: 25px;
+             font-family: 'Times New Roman', Times, serif;
+             color: blue;
+        }
+  
+        b{
+            background-color: white;
+            padding: 2px;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+    <body>
+        
+     <br>
+    
+
+        <h1>Group By Clause </h1>
+        <p>The group by clause is used for making group of the data we can not use group by clause if we donot any group function (aggregrate function). To group the result set of the rows that have the same values in the result set from the database tables, the GROUP BY clause is used.</p>
+
+
+        <h1>Group function (aggregrate function)</h1>
+        <p><b>1. COUNT FUNCTION : </b>COUNT function is used to Count the number of rows in a database table. It can work on both numeric and non-numeric data types.<br>
+        <b> COUNT(*) : </b>COUNT function uses the COUNT(*) that returns the count of all the rows in a specified table. COUNT(*) considers duplicate and Null.</p>
+
+        <p><b>2. SUM Function : </b>Sum function is used to calculate the sum of all selected columns. It works on numeric fields only.</p>
+
+        <p><b>3. AVG function : </b>The AVG function is used to calculate the average value of the numeric type. AVG function returns the average of all non-Null values.</p>
+
+        <p><b>4. MAX Function : </b>MAX function is used to find the maximum value of a certain column. This function determines the largest value of all selected values of a column.</p>
+
+        <p><b>5. MIN Function : </b>MIN function is used to find the minimum value of a certain column. This function determines the smallest value of all selected values of a column.</p>
+
+        <h2><li><b>Syntax Of Group By Clause </b></li></h2>
+        <p><b>Mysql> </b>SELECT column_name(s), group function<br>
+            FROM table_name<br>
+            GROUP BY column_name(s); </p>
+        
+        <h2><li><b>Example of Group By Clause</b> </li></h2>
+        <p>select age , count(age) from student group by age;</p>
+        <p>select marks , count(marks) from student group by marks;</p>
+        <iframe src="./images/group by1.png" width="65%" height="370px" frameborder="2px"></iframe><br><br><br>
+
+       <button onclick="history.back()">Back</button> <br>
+
+
+        
+    </body>
+</html>

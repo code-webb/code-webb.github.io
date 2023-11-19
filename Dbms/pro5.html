@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+
+
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color:rgb(114, 1, 114);
+    margin-top: 12px;
+  }
+
+p  {
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+}
+li  {
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+}
+     b{
+            background-color: white;
+            padding: 5px;
+            font-size: 18px;
+         }
+
+         button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+  
+</style>
+</head>
+    <body>
+
+     <br>
+
+        <h1>Characteristics of the Data Base Approach</h1>
+        
+        <p></b>Characteristics of database approach : </b>Some of the most important characteristics of the database approach to the file processing approach are the following as follows.</p>
+
+        <b>Approach-1 : Self-Describing Nature of a Database System :</b>
+        <p><li>One of the most fundamental characteristics of the database approach is that the database system        contains not only the database itself but also an entire definition or description of the database structure and constraints also known as metadata of the database. </li></p>
+        <p><li>This definition is stored within the DBMS catalog, which contains information like the structure of every file, the sort and storage format of every data item, and various constraints/rules on the information.</li></p>
+        <p><li>A general-purpose DBMS software package is not written for a selected database application. Therefore, it must ask the catalog to understand the structure of the files during a specific database, like the sort and format of knowledge it will access. </li></p>
+
+        <b>Approach-2 : Isolation between Programs and Data, and Data Abstraction : </b>
+        <p><li>In a traditional file processing system, the structure of database knowledge files is embedded within the application programs, so any changes to the structure of a file may require changing all programs that access that file. </li></p>
+        <p><li>Against this, DBMS access programs don’t require such changes in most cases, so independence is achieved between them. </li></p>
+        <p><li>The structure of knowledge files is stored within the DBMS catalog separately from the programs that access them. We call this property program-data independence.</li> </p>
+
+        <b>Approach-3 : Support for Multiple Views of the Data :</b>
+        <p><li>A database sometimes has many users, each of whom may require a special perspective or view of the database. </li></p>
+        <p><li>A view could also be a subset of the database, or it’s going to contain virtual data that is derived from the database files but isn’t explicitly stored.</li></p> 
+        <p><li>Some users might not get to remember whether the information they ask for is stored or derived.</li></p> 
+        <p> <li>A multi-user DBMS whose users have a spread of distinct applications must provide facilities for outlining multiple views. This provides many benefits for large databases such as the Aadhaar database.</li></p>
+
+           <b>Approach-4 : Sharing of knowledge and Multi-user Transaction Processing :</b>
+           <p><li>A multi-user DBMS, as its name implies, must allow multiple users to access the database at an equivalent time or concurrently. </li></p>
+            <p><li>This is often essential if data for multiple applications is to be integrated and maintained during a single database such as the latest feature of WhatsApp integration with Facebook.</li></p> 
+            <p><li>The DBMS must implement concurrency control in the software to make sure that several users trying to update equivalent data do so in a controlled manner in order that the results of the updates are correct. </li></p><br><br>
+
+
+            <button onclick="history.back()">Back</button><br>
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <style>
+
+
+
+h1{
+font-family: 'Times New Roman', Times, serif;
+font-size: 35px;
+color:rgb(114, 1, 114);
+margin-top: 12px;
+}
+
+
+p  {
+font-size: 20px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    color: blue;
+ }
+ b{
+            background-color: white;
+            padding: 5px;
+            font-size: 18px;
+         }
+
+ 
+         button {
+            width: 110px;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: darkgray;
+            color: white;
+            border: none;
+            
+            
+        }
+
+</style>
+</head>
+<body>
+
+    <br>
+
+        <h1>Integrity constraints over Relation</h1>
+        
+        <p><b>Integrity Constraints : </b>In Database Management Systems, integrity constraints are pre-defined set of rules that are applied on the table fields(columns) or relations to ensure that the overall validity, integrity, and consistency of the data present in the database table is maintained. Evaluation of all the conditions or rules mentioned in the integrity constraint is done every time a table insert, update, delete, or alter operation is performed.</p>
+
+<h2>There are four types of integrity constraints in DBMS:</h2>
+
+<p>1.Domain Constraint<br>
+2. Entity Constraint<br>
+3. Referential Integrity Constraint<br>
+4. Key Constraint</p>
+
+<h4><img src="./images/integrity-constraints1.png"></h4><br><br>
+
+<p><b>1. Domain Constraint : </b>Domain integrity constraint contains a certain set of rules or conditions to restrict the kind of attributes or values a column can hold in the database table. The data type of a domain can be string, integer, character, DateTime, currency, etc.</p>
+
+<h2><img src="./images/domain.webp"></h2><br><br>
+
+<p><b>2. Entity Integrity Constraint : </b>Entity Integrity Constraint is used to ensure that the primary key cannot be null. A primary key is used to identify individual records in a table and if the primary key has a null value, then we can't identify those records. There can be null values anywhere in the table except the primary key column.</p>
+
+    <h3><img src="./images/entiti intigrity.jpg"></h3><br><br>
+
+<p><b>3. Referential Integrity Constraint : </b>Referential Integrity Constraint ensures that there must always exist a valid relationship between two relational database tables. This valid relationship between the two tables confirms that a foreign key exists in a table. It should always reference a corresponding value or attribute in the other table or be null.</p>
+
+<img src="./images/referional inigrity costraint.png"><br><br>
+
+<p><b>4. Key constraint : </b>Keys are the set of entities that are used to identify an entity within its entity set uniquely. There could be multiple keys in a single entity set, but out of these multiple keys, only one key will be the primary key. A primary key can only contain unique and not null values in the relational database table.</p>
+
+<h5><img src="./images/Key-Constraints.webp"></h5><br><br>
+
+<button onclick="history.back()">Back</button><br>
+
+
+
+    </body>
+</html>
